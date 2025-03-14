@@ -10,9 +10,9 @@ def tournament(rng: np.random.Generator, fitnesses: list[Fitness], k: int) -> in
     Perform tournament selection and return the index of the best individual.
 
     :param rng: Random number generator.
-    :param fitnesses: List of finesses of individuals that joint the tournamente.
+    :param fitnesses: List of finesses of individuals that joint the tournament.
     :param k: Amount of individuals to participate in tournament.
-    :returns: The index of te individual that won the tournament.
+    :returns: The index of the individual that won the tournament.
     """
     assert len(fitnesses) >= k
 
