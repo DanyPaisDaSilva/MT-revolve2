@@ -1,6 +1,6 @@
 from individual import Individual
 
-#contains functionality
+# contains functionality
 
 def find_best_robot(
     current_best: Individual | None, population: list[Individual]

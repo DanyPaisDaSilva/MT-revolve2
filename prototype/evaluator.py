@@ -61,7 +61,7 @@ class Evaluator(Eval):
         """
         Evaluate multiple robots.
 
-        Fitness is the distance traveled on the xy plane.
+        Fitness is the distance traveled on the x plane.
 
         :param population: The robots to simulate.
         :returns: Fitnesses of the robots.
