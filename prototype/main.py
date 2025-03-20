@@ -1,5 +1,6 @@
 import logging
 import pickle
+import time
 
 import config
 import multineat
@@ -78,6 +79,7 @@ def run() -> None:
 
     # start optimization process.
     logging.info("Start optimization process.")
+    start_time = time.time()
     while generation_index < config.NUM_GENERATIONS:
         logging.info(f"Generation {generation_index + 1} / {config.NUM_GENERATIONS}.")
 
@@ -92,6 +94,7 @@ def run() -> None:
 
         # Increase the generation index counter.
         generation_index += 1
+    logging.info(f"Time taken: {time.time() - start_time} seconds.")
 
 if __name__ == "__main__":
     run()
