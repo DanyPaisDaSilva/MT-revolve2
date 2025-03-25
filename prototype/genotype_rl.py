@@ -118,27 +118,3 @@ class CustomBrain(Brain):
         :returns: The created instance.
         """
         return CustomBrainInstance()
-
-class CustomContinuousEnv(gym.Env):
-
-    # each environment needs a custom environment
-
-    def __init__(self, CustomBrain):
-        super(CustomContinuousEnv, self).__init__()
-        # TODO: get action space and observation space from active hinges
-        self.action_space = spaces.Box(low=-1.0, high=1.0, shape=(1111,), dtype=np.float32)
-        self.observation_space = spaces.Box(low=-1111, high=1111, shape=(1111,), dtype=np.float32)
-        self.state = None
-
-    def reset(self):
-        # get state from active hinges
-        self.state = np.random.random(size=(1111,))
-        return self.state
-
-    def step(self, action):
-        # get reward from evaluator ?
-        reward = -np.sum(action**2)  # example reward
-        self.state = np.random.random(size=(1111,))
-        done = False
-        info = {}
-        return self.state, reward, done, info
