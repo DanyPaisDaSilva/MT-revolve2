@@ -6,10 +6,10 @@ from gym.core import RenderFrame
 import numpy as np
 
 
-class CustomEnv(gym.Env):
+class CustomMujocoEnv(gym.Env):
 
     def __init__(self):
-        super(CustomEnv, self).__init__()
+        super(CustomMujocoEnv, self).__init__()
         # spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
 
         # get action & observation space from Individual
